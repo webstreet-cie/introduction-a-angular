@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {TrainingsService} from './services/training.service';
+import {TrainingService} from './core/service/training.service';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     CoreModule
   ],
-  providers: [TrainingsService],
+  providers: [TrainingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

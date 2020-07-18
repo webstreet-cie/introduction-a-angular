@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Category } from './../models/category.model';
-import {Training} from './../models/training.model';
-import { Module } from './../models/module.model';
+import { Category } from '../../models/category.model';
+import {Training} from '../../models/training.model';
+import { Module } from '../../models/module.model';
 
 @Injectable()
+export class TrainingService {
 
-export class TrainingsService {
-   
-
-    trainings: Training[];
+   trainings: Training[];
 
 
     getTrainings() {
