@@ -1,5 +1,5 @@
-import { Category } from './category.model';
-import {Module} from './module.model';
+import { Category } from './category';
+import {Module} from './module';
 
 export class Training {
     constructor(
