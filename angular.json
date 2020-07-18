@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "introduction-a-angular"
+    }
+  },
+  "defaultProject": "introduction-a-angular",
+  "cli": {
+    "analytics": false
+  }
 }
