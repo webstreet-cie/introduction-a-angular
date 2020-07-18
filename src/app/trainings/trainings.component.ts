@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {TrainingsService} from './training.service';
-
+import {TrainingsService} from '../services/training.service';
+import {Training} from '../models/training.model';
 
 @Component({
   selector: 'app-trainings',
@@ -9,12 +9,11 @@ import {TrainingsService} from './training.service';
 })
 export class TrainingsComponent implements OnInit {
   title = "Liste des formations";
-  trainings;
+  trainings: Training[];
 
   constructor(service:TrainingsService) { 
-
-   
     this.trainings = service.getTrainings();
+    console.log(this.trainings);
   }
 
   getTitle() {

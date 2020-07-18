@@ -1,8 +1,27 @@
 <h2>{{getTitle()}}</h2>
-<ul>
-    <li *ngFor="let training of trainings">
-        <p [ngStyle]="{'background-color':training.category === 'serveur' ? '#bde0ff' : '#ffbdd6'}">
-            {{training.name}} - Prix {{training.price}} € H.T
-        </p>
-    </li>
-</ul>
+<div *ngFor="let training of trainings">
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Catégorie : {{training.category.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Titre : {{training.title}}</h6>
+          <p class="card-text"><strong>Description :</strong> {{training.description}}</p>
+          
+            <strong>Objectifs</strong>
+            <ul>
+                <li *ngFor="let goal of training.goals">{{goal}}</li>
+            </ul>
+
+            <strong>Programme :</strong>
+            <div *ngFor="let module of training.modules; let i = index;">
+                <strong><em>Module {{i + 1}}</em></strong><br/>
+                Titre : {{module.title}}
+                <ul>
+                    <li *ngFor="let item of module.items">{{item}}</li>
+                </ul>
+            </div>
+          
+          <a href="#" class="card-link">En savoir plus</a>
+        </div>
+      </div>
+      <br/>
+</div>
