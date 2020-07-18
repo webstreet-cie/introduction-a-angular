@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {TrainingsService} from '../services/training.service';
-import {Training} from '../models/training.model';
+import {TrainingsService} from '../../../services/training.service';
+import {Training} from '../../../models/training.model';
 
 @Component({
-  selector: 'app-trainings',
-  templateUrl: './trainings.component.html',
-  styleUrls: ['./trainings.component.css']
+  selector: 'app-training-list',
+  templateUrl: './training-list.component.html',
+  styleUrls: ['./training-list.component.css']
 })
-export class TrainingsComponent implements OnInit {
+export class TrainingListComponent implements OnInit {
+
   title = "Liste des formations";
   trainings: Training[];
 

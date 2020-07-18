@@ -5,18 +5,17 @@ import {TrainingsService} from './services/training.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TrainingsComponent } from './trainings/trainings.component';
-import { CategoriesComponent } from './categories/categories.component';
+
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TrainingsComponent,
-    CategoriesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [TrainingsService],
   bootstrap: [AppComponent]
