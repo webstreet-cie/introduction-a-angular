@@ -6,11 +6,13 @@ import {TrainingsService} from './trainings/training.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TrainingsComponent } from './trainings/trainings.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TrainingsComponent
+    TrainingsComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
