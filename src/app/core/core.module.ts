@@ -1,33 +1,30 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import {SharedModule} from '../shared/shared.module';
-
+import { SharedModule } from '../shared/shared.module'; 
 import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
 import { ServiceModule } from './service/service.module';
-import { PublicMenuComponent } from './layout/public-menu/public-menu.component';
-import { FooterComponent } from './layout/footer/footer.component';
-
-
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
-  declarations: [PublicMenuComponent, FooterComponent],
+  declarations: [],
   imports: [
+    // Importer le SharedModule plutôt que le CommonModule : 
     SharedModule,
     PublicModule,
     ProtectedModule,
-    ServiceModule
+    ServiceModule,
+    LayoutModule
   ],
   exports: [
     PublicModule,
     ProtectedModule,
-    PublicMenuComponent,
-    FooterComponent
+    LayoutModule
   ]
 })
 export class CoreModule { 
-  constructor(@Optional() @SkipSelf() parentModule: CoreModule) { 
-     if (parentModule) { 
-     throw new Error('CoreModule is already loaded.'); 
-     } 
-   } 
- }
+ constructor(@Optional() @SkipSelf() parentModule: CoreModule) { 
+    if (parentModule) { 
+    throw new Error('CoreModule is already loaded.'); 
+    } 
+  } 
+}
