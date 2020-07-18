@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {SharedModule} from '../shared/shared.module';
+
 
 import { ProtectedRoutingModule } from './protected-routing.module';
 
@@ -7,7 +8,7 @@ import { ProtectedRoutingModule } from './protected-routing.module';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+    SharedModule,
     ProtectedRoutingModule
   ]
 })

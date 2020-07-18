@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
+import {SharedModule} from '../shared/shared.module';
+
 import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
 import { ServiceModule } from './service/service.module';
@@ -9,7 +10,7 @@ import { ServiceModule } from './service/service.module';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+    SharedModule,
     PublicModule,
     ProtectedModule,
     ServiceModule
@@ -19,4 +20,10 @@ import { ServiceModule } from './service/service.module';
     ProtectedModule
   ]
 })
-export class CoreModule { }
+export class CoreModule { 
+  constructor(@Optional() @SkipSelf() parentModule: CoreModule) { 
+     if (parentModule) { 
+     throw new Error('CoreModule is already loaded.'); 
+     } 
+   } 
+ }

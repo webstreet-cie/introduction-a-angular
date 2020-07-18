@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {SharedModule} from '../../shared/shared.module';
+
 import {CategoryService} from './category.service';
 import {TrainingService} from './training.service';
 
@@ -7,7 +8,7 @@ import {TrainingService} from './training.service';
 @NgModule({
   providers: [CategoryService,TrainingService],
   imports: [
-    CommonModule
+    SharedModule
   ]
 })
 export class ServiceModule { }
