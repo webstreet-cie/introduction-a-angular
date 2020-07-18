@@ -4,6 +4,7 @@ import {SharedModule} from '../shared/shared.module';
 
 import { PublicRoutingModule } from './public-routing.module';
 import { TrainingModule } from './training/training.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TrainingModule } from './training/training.module';
   imports: [
     SharedModule,
     PublicRoutingModule,
-    TrainingModule
+    TrainingModule,
+    HomeModule
   ],
   exports: [
     TrainingModule

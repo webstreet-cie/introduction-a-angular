@@ -4,11 +4,13 @@ import {SharedModule} from '../shared/shared.module';
 import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
 import { ServiceModule } from './service/service.module';
+import { PublicMenuComponent } from './layout/public-menu/public-menu.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [PublicMenuComponent, FooterComponent],
   imports: [
     SharedModule,
     PublicModule,
@@ -17,7 +19,9 @@ import { ServiceModule } from './service/service.module';
   ],
   exports: [
     PublicModule,
-    ProtectedModule
+    ProtectedModule,
+    PublicMenuComponent,
+    FooterComponent
   ]
 })
 export class CoreModule { 

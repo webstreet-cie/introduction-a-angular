@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import {SharedModule} from '../../shared/shared.module';
 
 import { TrainingListComponent } from './training-list/training-list.component';
+import { TrainingDetailComponent } from './training-detail/training-detail.component';
 
 
 
 @NgModule({
-  declarations: [TrainingListComponent],
+  declarations: [TrainingListComponent, TrainingDetailComponent],
   imports: [
     SharedModule
   ],
