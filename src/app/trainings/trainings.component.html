@@ -1,0 +1,8 @@
+<h2>{{getTitle()}}</h2>
+<ul>
+    <li *ngFor="let training of trainings">
+        <p [ngStyle]="{'background-color':training.category === 'serveur' ? '#bde0ff' : '#ffbdd6'}">
+            {{training.name}} - Prix {{training.price}} € H.T
+        </p>
+    </li>
+</ul>
