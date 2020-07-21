@@ -12,9 +12,8 @@ export class TrainingListComponent implements OnInit {
   title = "Liste des formations";
   trainings: Training[];
 
-  constructor(service:TrainingService) { 
-    this.trainings = service.getTrainings();
-    console.log(this.trainings);
+  constructor() { 
+    
   }
 
   getTitle() {

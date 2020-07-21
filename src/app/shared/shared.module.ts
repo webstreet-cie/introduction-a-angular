@@ -1,6 +1,9 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PartialsModule } from './partials/partials.module';
+//import { RouterModule } from '@angular/router';
+
 
 
 
@@ -8,11 +11,13 @@ import { PartialsModule } from './partials/partials.module';
   declarations: [],
   imports: [
     CommonModule,
-    PartialsModule
+    PartialsModule,
+   // RouterModule
   ],
   exports: [
     CommonModule,
-    PartialsModule
+    PartialsModule,
+    //RouterModule
   ]
 })
 export class SharedModule { }

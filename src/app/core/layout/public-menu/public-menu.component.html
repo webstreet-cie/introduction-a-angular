@@ -1,1 +1,47 @@
-<p>public-menu works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a href="#" class="navbar-brand">Web<b>Academy</b></a>  		
+	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+		<div class="navbar-nav">
+            <a routerLink="/fr" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"  class="nav-item nav-link">Accueil</a>
+            <div class="nav-item dropdown">
+				<a routerLink="/fr/formations" routerLinkActive="active" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Formations</a>
+				<div class="dropdown-menu">					
+					<a href="#" class="dropdown-item">Web Design</a>
+					<a href="#" class="dropdown-item">Développement Web</a>
+					<a href="#" class="dropdown-item">Graphisme</a>
+                    <a href="#" class="dropdown-item">Marketing Digital</a>
+                    <a href="#" class="dropdown-item">Outils de développement</a>
+                </div>
+            </div>
+            <a routerLink="/fr/sessions" routerLinkActive="active" class="nav-item nav-link">Sessions</a>	
+            	
+            <a routerLink="/fr/blog" routerLinkActive="active" class="nav-item nav-link">Blog</a>
+            <a routerLink="/fr/devenir-formateur" routerLinkActive="active" class="nav-item nav-link">Devenir Formateur</a>	
+			<a routerLink="/fr/contact" routerLinkActive="active" class="nav-item nav-link">Contact</a>
+		</div>
+		<form class="navbar-form form-inline">
+			<div class="input-group search-box">								
+				<input type="text" id="search" class="form-control" placeholder="Chercher ici...">
+				<div class="input-group-append">
+					<span class="input-group-text">
+						<i class="material-icons">&#xE8B6;</i>
+					</span>
+				</div>
+			</div>
+		</form>
+		<div class="navbar-nav ml-auto action-buttons">
+			<div class="nav-item dropdown">
+				<a routerLink="/fr/connexion" routerLinkActive="active" class="nav-link mr-4">Se connecter</a>
+ 
+			</div>
+			<div class="nav-item dropdown">
+				<a routerLink="/fr/inscription" routerLinkActive="active" class="btn btn-primary sign-up-btn">S'inscrire</a>
+
+			</div>
+        </div>
+	</div>
+</nav>
