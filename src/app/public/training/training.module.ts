@@ -1,5 +1,7 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import {SharedModule} from '../../shared/shared.module';
+
 
 import { TrainingListComponent } from './training-list/training-list.component';
 import { TrainingDetailComponent } from './training-detail/training-detail.component';
@@ -11,7 +13,8 @@ import { TrainingListContainerComponent } from './training-list-container/traini
 @NgModule({
   declarations: [TrainingListComponent, TrainingDetailComponent, TrainingListCardComponent, TrainingListContainerComponent],
   imports: [
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports: [
     TrainingListComponent

@@ -1,13 +1,13 @@
 <h2>{{getTitle()}}</h2>
-
-
       <app-training-list-card *ngFor="let training of trainings"
+      [id]="training.id"
+      [slug]="training.slug"
+      [level]="training.level"
       [title]="training.title"
       [category]="training.category.name"
+      [durationInHours]="training.durationInHours"
+      [reference]="training.reference"
       [description]="training.description"
+      [modalities]="training.modalities"
       >   
-
-
-
-      
     </app-training-list-card>

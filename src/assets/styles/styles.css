@@ -1,7 +1,7 @@
 @import '~material-icons/iconfont/material-icons.css';
 
 body{
-	font-family: 'Varela Round', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 /*NAVBAR*/
@@ -291,3 +291,274 @@ body{
 }
 
 /*FOOTER*/
+
+/*TRANING LIST CARD*/
+.detail {
+  box-shadow: 3px 4px 5px 3px rgba(0,0,0,.2);
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+.detail img {
+  width:100%;
+}
+
+.detail-box {
+  margin-left: 20px;
+}
+
+.detail-box h4 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.detail-box p{
+  margin-bottom: 14px;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: justify;
+  margin-right: 10px;
+}
+
+.detail-box p a{
+border-bottom: 1px dotted #529cec;
+text-decoration: none;
+color: #529cec;
+}
+
+.detail-box p a:hover{
+  color: #DD4B39;
+  border-bottom: 1px dotted #DD4B39;
+}
+
+.detail-box p i.fas{
+color: #DD4B39;
+}
+
+.detail-box ul{
+padding: 0px;
+margin: 0px;
+margin-bottom: 10px;
+}
+
+.detail-box ul li{
+    list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #000;
+  border: 2px solid #1D3557;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.detail-box ul li:hover{
+background-color: #1D3557;
+border: 2px solid #1D3557;
+color: #fff;
+}
+
+.detail-box h6{
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.detail-box h6 .category{
+  color:white;
+  font-size: 12px;
+  background: linear-gradient(115deg, rgb(134, 128, 128) 0%, rgb(29, 53, 87) 40%, transparent 40%),#000;
+}
+
+.detail-box h6 .virtual{
+  color:white;
+  font-size: 12px;
+  background-color:#FF9505;
+  
+}
+
+.detail-box h6 .ourplace{
+  color:white;
+  font-size: 12px;
+  background-color:#35A7FF;
+}
+
+.detail-box h6 .yourplace{
+  color:white;
+  font-size: 12px;
+  background-color:#0EAD69;
+}
+
+
+
+.detail-box h6 .more{
+float: right;
+font-size: 18px;
+line-height: 22px;
+font-weight: 400;
+color: #DD4B39;  
+margin-right: 10px;
+}
+
+.detail-box h6 .more a{
+background-color: #DD4B39;
+color:white;
+font-size:12px;
+margin-bottom:10px;
+}
+
+.detail-box h6 .more .btn:hover{
+  background-color: #eb8c7f !important;
+  }
+
+.carousel-item:after {
+content:"";
+display:block;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+background:rgba(0,0,0,0.4);
+}
+
+.detail-body{
+padding: 40px 0;
+}
+
+.title{
+padding-bottom: 30px;
+}
+
+
+
+
+.offer {
+  background: linear-gradient(115deg, rgb(134, 128, 128) 0%, rgb(29, 53, 87) 40%, transparent 40%),#000;
+  max-width: 250px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.offer-text {
+  color: white;
+  padding: 15px;
+  font-weight: 700;
+}
+
+.offer-text-2 {
+  color: white;
+  font-weight: 700;
+  margin-left: 25px;
+}
+
+.eligibal{
+  padding: 20px;
+  border: 1px solid #eee;
+  background-color: rgba(239, 238, 238, 0.19);
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fcfcfc;
+  margin-top: -31px;
+  position: absolute;
+  right: 50px;
+  z-index: 9999;
+}
+
+.eligibal p{
+font-size: 13px;
+line-height: 20px;
+}
+
+.ribbon {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  width: 94px;
+  height: 94px;
+  text-align: center;
+}
+
+.ribbon span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFF;
+  line-height: 25px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 145px;
+  display: block;
+  background: #f94141;
+  background: linear-gradient(#1D3557 0,#000 100%);
+  text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+  position: absolute;
+  top: 25px;
+  left: -34px;
+}
+
+.detail .discount-holder {
+  color: #fff;
+  background: #DD4B39;
+  top: 5px;
+  right: -5px;
+  position: relative;
+  border-radius: 0 5px 0 0;
+  float: right;
+  font-size: 12px;
+}
+
+.detail .discount-holder span {
+  display: block;
+  position: relative;
+  padding: 2px 12px 2px 8px;
+}
+
+.detail .discount-holder span:before {
+  width: 0;
+  height: 0;
+  border-top: 17px solid #DD4B39;
+  border-left: 15px solid transparent;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  content: '';
+}
+
+.detail .discount-holder span:after {
+  width: 0;
+  height: 0;
+  border-bottom: 17px solid #DD4B39;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  content: '';
+}
+
+.detail .discount-holder:after {
+  background: #DD4B39;
+  border-bottom-right-radius: 4px;
+  bottom: -6px;
+  content: "";
+  height: 6px;
+  right: 0;
+  position: absolute;
+  width: 5px;
+}
+/*TRANING LIST CARD*/
