@@ -1,7 +1,7 @@
 <div class="row detail">
   <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-0">
     <div class="ribbon"><span>{{level}}</span></div>
-    <img src="assets/img/formation_angular.png" alt="">
+    <img src={{imageUrl}} alt="">
   </div>
   <div class="col-12 col-sm-12 col-md-12 col-lg-8">
     <span class="discount-holder"><span>Financement : CPF / OPCO</span></span>
@@ -28,7 +28,7 @@
           <span class="badge" [ngClass]="{'virtual': modality.name === 'Classe Virtuelle', 'ourplace':modality.name === 'Présentiel', 'yourplace':modality.name === 'Sur-Mesure' }">{{modality.name}}</span>&nbsp;
         </span>
 
-        <span class="more"><a [routerLink]="['/fr/formations',slug,id]" class="btn" style="background-color:#DD4B39">En savoir plus</a></span>
+        <span class="more"><a [routerLink]="['/fr/formations',slug,id]" class="btn">En savoir plus</a></span>
       </h6>
     </div>
   </div>

@@ -15,5 +15,6 @@ export class TrainingListCardComponent {
   @Input() modalities:string[];
   @Input() id: string;
   @Input() slug: string;
+  @Input() imageUrl:string;
   constructor() { }
 }

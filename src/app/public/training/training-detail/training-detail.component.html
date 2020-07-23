@@ -1,3 +1,423 @@
-<h2>{{ title }}</h2>
-<a routerLink="/fr/formations">Retour à la liste des formations</a>
+	
+	<div class="container">
+		<div class="card event-card">
+			<div class="container-fliud">
+				<div class="wrapper row">
 
+                   
+                        <div class="col-md-9">
+                            <div class="div-product-title">
+                            
+                            <h3 class="product-title">{{title}}</h3>
+                           
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <a routerLink="/fr/formations" routerLinkActive="active" class="btn float-right">Retour à la liste</a>
+
+                            
+                        </div>
+
+  
+                    
+
+                <div class="col-md-12">
+                    <div class="div-product-subtitle">
+                   
+                        <span class="product-sub-title">{{category}}</span>
+                        <span class="separator"> . </span>
+                        <span class="product-sub-title">{{reference}}</span>
+                        <span class="separator"> . </span>
+                        <span class="product-sub-title">{{durationInHours}} heures</span>
+                    
+                    </div>
+                </div>
+
+                <div class="row">
+					<div class="preview col-lg-6">
+						
+						<div class="preview-pic tab-content">
+                          <div class="tab-pane active" id="pic-1">
+                            <div class="ribbon"><span>{{level}}</span></div>  
+                            <img src={{imageUrl}} />
+                        
+                        </div>
+						
+                        </div>
+                       
+						
+					</div>
+					<div class="details col-lg-6">
+                        <hr/>
+                        <div class="row">
+                            <div class="col-md-1 picto">
+                                <i class="material-icons">
+                                    schedule
+                                </i>
+
+                            </div>
+                            <div class="col-md-11">
+                                <span><strong>Horaires</strong></span>
+                                <br/>
+                                <span class="training-card-presentation-text">9h00-12h00 et 14h00-17h30</span>
+                            </div>        
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-1 picto">
+                                <i class="material-icons">
+                                    people
+                                </i>
+
+                            </div>
+                            <div class="col-md-11">
+                                <span><strong>Participants</strong></span>
+                                <br/>
+                                <span class="training-card-presentation-text">
+                                    <span *ngFor="let participant of participants; let i=index">
+                                        {{participant}}<span *ngIf="i != participants.length-1">,</span>
+            
+                                    </span>
+
+
+                                </span>
+                            </div>        
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-1 picto">
+                                <i class="material-icons">
+                                    book
+                                </i>
+
+                            </div>
+                            <div class="col-md-11">
+                                <span><strong>Pré-requis</strong></span>
+                                <br/>
+                                <span class="training-card-presentation-text">{{prerequisite}}</span>
+                            </div>        
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-1 picto">
+                                <i class="material-icons">
+                                    school
+                                </i>
+
+                            </div>
+                            <div class="col-md-11">
+                                <span><strong>Compétences acquises</strong></span>
+                                <br/>
+                                <span class="training-card-presentation-text">
+                                    <span *ngFor="let skill of skills; let i=index">
+                                        {{skill.name}}<span *ngIf="i != skills.length-1">,</span>
+                                    </span>
+
+                                </span>
+                            </div>        
+
+                        </div>
+                        <hr/>
+                    </div>
+                </div>
+                </div>
+               
+              
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-sessions-tab" data-toggle="tab" href="#nav-sessions" role="tab" aria-controls="nav-sessions" aria-selected="false">Sessions</a>
+                        <a class="nav-item nav-link" id="nav-program-tab" data-toggle="tab" href="#nav-program" role="tab" aria-controls="nav-program" aria-selected="true">Programme</a>
+                        <a class="nav-item nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">Informations Complémentaires</a>
+
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-sessions" role="tabpanel" aria-labelledby="nav-sessions-tab">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="[ col-xs-12 col-sm-offset-2 col-sm-12 ]">
+                                    <ul class="event-list" *ngIf="sessions.length > 0" >
+                                        <li *ngFor="let session of sessions">
+                                            <div class="ribbon-event"><span>{{session.sessionModality.name}}</span></div>
+
+                                            <time datetime="2018-10-29">
+                                                <span class="day">{{session.startDateTime.substring(8,10)}}</span>
+                                                <ng-container [ngSwitch]="session.startDateTime.substring(5,7)">
+                                                    <span class="month" *ngSwitchCase="01">Jan</span>
+                                                    <span class="month" *ngSwitchCase="02">Fév</span>
+                                                    <span class="month" *ngSwitchCase="03">Mar</span>
+                                                    <span class="month" *ngSwitchCase="04">Avr</span>
+                                                    <span class="month" *ngSwitchCase="05">Mai</span>
+                                                    <span class="month" *ngSwitchCase="06">Juin</span>
+                                                    <span class="month" *ngSwitchCase="07">Juil</span>
+                                                    <span class="month" *ngSwitchCase="08">Août</span>
+                                                    <span class="month" *ngSwitchCase="09">Sept</span>
+                                                    <span class="month" *ngSwitchCase="10">Oct</span>
+                                                    <span class="month" *ngSwitchCase="11">Nov</span>
+                                                    <span class="month" *ngSwitchCase="12">Déc</span>
+                                                    
+
+                                                </ng-container>
+                                                <span class="year">{{session.startDateTime.substring(0,4)}}</span>
+                                                <span class="time">ALL DAY</span>
+                                            </time>
+
+                                            <ng-container [ngSwitch]="session.sessionModality.name">
+                                              
+                                             <img *ngSwitchCase="'Classe Virtuelle'"alt="formation" src="assets/img/e-learning.jpg" />
+                                             <img *ngSwitchCase="'Présentiel'"alt="formation" src="assets/img/presentiel.jpg" />
+
+                                            </ng-container>
+                                            
+                                             
+
+                                            <div class="info">
+                                                
+                                                <div class="row">
+                                                    <div class="col-sm-9 sm-12">
+                                                        <h2 class="event-title">{{title}}</h2>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">Début :</div>
+                                                    <div class="col-sm-9">
+                                                        {{session.startDateTime.substring(8,10)}}
+                                                        <ng-container [ngSwitch]="session.startDateTime.substring(5,7)">
+                                                            <span *ngSwitchCase="01">Jan</span>
+                                                            <span *ngSwitchCase="02">Fév</span>
+                                                            <span *ngSwitchCase="03">Mar</span>
+                                                            <span *ngSwitchCase="04">Avr</span>
+                                                            <span *ngSwitchCase="05">Mai</span>
+                                                            <span *ngSwitchCase="06">Juin</span>
+                                                            <span *ngSwitchCase="07">Juil</span>
+                                                            <span *ngSwitchCase="08">Août</span>
+                                                            <span *ngSwitchCase="09">Sept</span>
+                                                            <span *ngSwitchCase="10">Oct</span>
+                                                            <span *ngSwitchCase="11">Nov</span>
+                                                            <span *ngSwitchCase="12">Déc</span>
+                                                        </ng-container>
+
+                                                        {{session.startDateTime.substring(0,4)}}
+                                                        ({{session.startDateTime.substring(11,16)}})
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">Fin :</div>
+                                                    <div class="col-sm-9">
+                                                        {{session.endDateTime.substring(8,10)}}
+                                                        <ng-container [ngSwitch]="session.endDateTime.substring(5,7)">
+                                                            <span *ngSwitchCase="01">Jan</span>
+                                                            <span *ngSwitchCase="02">Fév</span>
+                                                            <span *ngSwitchCase="03">Mar</span>
+                                                            <span *ngSwitchCase="04">Avr</span>
+                                                            <span *ngSwitchCase="05">Mai</span>
+                                                            <span *ngSwitchCase="06">Juin</span>
+                                                            <span *ngSwitchCase="07">Juil</span>
+                                                            <span *ngSwitchCase="08">Août</span>
+                                                            <span *ngSwitchCase="09">Sept</span>
+                                                            <span *ngSwitchCase="10">Oct</span>
+                                                            <span *ngSwitchCase="11">Nov</span>
+                                                            <span *ngSwitchCase="12">Déc</span>
+                                                        </ng-container>
+
+                                                        {{session.endDateTime.substring(0,4)}}
+                                                        ({{session.endDateTime.substring(11,16)}})
+
+
+                                                    </div>
+                                                </div>
+                                                
+                                                    <ng-container *ngIf="session.localisation != null">
+                                                        <div class="row">
+                                                            <div class="col-sm-3">Addresse :</div>
+                                                            <div class="col-sm-9">
+                                                                {{session.localisation.address.address}}
+                                                                {{session.localisation.address.zipCode}}
+                                                                {{session.localisation.address.city}}
+                                                                ({{session.localisation.address.operationCity}}) - 
+                                                                Salle : {{session.localisation.room}}
+                                                            </div>
+                                                        </div>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="session.localisation == null">
+                                                        <div class="row">
+                                                            <div class="col-sm-3">Connexion :</div>
+                                                            <div class="col-sm-9">
+                                                               Le lien vous sera envoyé par e-mail, suite à votre inscription.
+                                                            </div>
+                                                        </div>
+                                                    </ng-container>
+                                                   
+                                                
+                                                <div class="row">
+                                                    <div class="col-sm-3">Enseigné en :</div>
+                                                    <div class="col-sm-9">{{session.language.name}}</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">Prix :</div>
+                                                    <div class="col-sm-9">{{session.sessionModality.price}} € / personne</div>
+                                                </div>
+                                                <div class="row last-row">
+                                                    <div class="col-sm-12 ">
+                                                        <a routerLink="/fr/inscription" routerLinkActive="active" class="btn sign-up-btn">Participer</a>
+                                                    </div>
+                                                </div>	
+
+                                                 
+                                                						
+                                            </div>
+                                            <div class="social">
+                                                <ul>
+                                                    <li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+                                                    <li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+                                                    <li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-soundcloud"></span></a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ng-container *ngIf="sessions.length == 0">
+                                        <div class="card no-session">
+                                    Il n'y a pas de sessions programmées pour cette formation pour le moment.
+                                    Vous souhaitez suivre cette formation ? 
+                                    Aucun problème ! Nous pouvons vous organiser une formation Sur-Mesure !
+                                    Contactez nos conseillers formations :
+                                            <hr/>
+                                    <div class="row">
+                                        <div class="btn-no-session ml-auto mr-auto">
+                                            
+                                            
+                                            <a  class="btn disabled">
+                                                <i class="material-icons">call</i>
+                                                09.72.52.79.79
+                                            </a>
+                                       
+
+                                            <a class="btn" href="mailto:contact@webstreet.io">
+                                                <i class="material-icons">email</i>
+                                                contact@webstreet.io
+                                            </a>
+                                        </div>
+         
+                                    </div>
+                                </div>
+                    	
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
+
+                        <ng-container *ngFor="let module of modules; let i=index" >
+                            <div class="card module-card" >
+                              <div class="card-header" >
+                                <h5 class="card-title">Module {{i+1}} - {{module.title}} </h5>
+                                <p class="card-text" class="badge badge-module-duration">
+                                  Durée : {{module.durationInHours}} heure(s)
+                                </p> 
+                             
+                            </div>
+      
+                              <ul class="list-group list-group-flush" *ngFor="let chapter of module.chapters" >
+                                  <li class="list-group-item">{{chapter.title}}</li>
+      
+                              </ul>
+      
+                            </div>
+                            <br/>
+      
+                           </ng-container>
+
+
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                     <div class="container info">
+                        <div class="row">
+                           <span><strong>Description</strong></span> 
+                        </div>
+                        <div class="row">
+                        <p>{{description}}</p> 
+                        </div>
+                        <div class="row">
+                            <span><strong>Tarifs détaillés</strong></span> 
+                         </div>
+                         <div class="row">
+                            <div class="tab-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered">
+                                      
+                                        
+                                          <tbody>
+                                            <tr *ngFor="let modality of modalities">
+                                              <td>{{modality.name}}</td>
+                                              <td  scope="row"><strong>{{modality.price}} €</strong></td>
+                                             
+        
+                                            </tr>
+                                           
+                                          </tbody>
+                                    </table>
+                                  </div>
+                    
+                            </div>
+                          
+                             
+                         </div>
+                         <div class="row">
+                            <span><strong>Objectifs pédagogiques</strong></span> 
+                         </div>
+                         <div class="row">
+                            <ul >
+                               <li *ngFor="let goal of goals">{{goal}}</li>
+    
+                            </ul>
+                         </div>
+                          <div class="row">
+                            <span><strong>Travaux pratiques</strong></span> 
+                         </div>
+                         <div class="row">
+                         
+                               <p>{{practicalWork}}</p>
+    
+                         </div>
+
+                         <div class="row">
+                            <span><strong>Méthodes pédagogiques</strong></span> 
+                         </div>
+                         <div class="row">
+                            <ul >
+                                <li *ngFor="let pedagogicalMethod of pedagogicalMethods">{{pedagogicalMethod}}</li>
+     
+                             </ul>
+    
+                         </div>
+
+                         <div class="row">
+                            <span><strong>Financement</strong></span> 
+                         </div>
+                         <div class="row">
+                         
+                               <p>Quelque-soit votre situation (salarié, étudiant, sans emploi), nous vous aidons à financer votre formation. Toutes nos formations sont éligibles au financement par les OPCO et par le CPF (Compte Personnel de Formation). Pour plus de renseignements, n'hésitez-pas à contacter nos conseillers formation
+                                   au 09.72.52.79.79.
+                               </p>
+    
+                         </div>
+
+                    </div>
+
+                    </div>
+
+                  </div>
+			</div>
+		</div>
+	</div>

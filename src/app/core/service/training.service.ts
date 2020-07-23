@@ -27,7 +27,7 @@ export class TrainingService {
          "description": "Dans cette formation, vous apprendrez à créer des applications web et mobiles performantes à l'aide du framework Angular.",
          "image": {
              "file": null,
-             "url": "/media/angular-training.PNG"
+             "url": "/assets/img/formation_angular.png"
          },
          "level": "Intermédiaire",
          "goals": [
@@ -510,7 +510,59 @@ export class TrainingService {
                  ],
                  "durationInHours": 2
              }
-         ]
+         ],
+         "sessions": [
+            {
+                "id": 1,
+                "language": {
+                    "name": "Français"
+                },
+                "sessionModality": {
+                    "id": 4,
+                    "name": "Classe Virtuelle",
+                    "price": 504
+                },
+                "trainer": {
+                    "firstname": "Roxane",
+                    "lastname": "Anquetil"
+                },
+                "localisation": null,
+                "slug": "formation-angular-creer-des-applications-web-du-24082020-au-27082020-langage-fr",
+                "startDateTime": "2020-08-24T09:00:00+00:00",
+                "endDateTime": "2020-08-27T17:30:00+00:00"
+        
+            },
+            {
+                "id": 2,
+                "language": {
+                    "name": "Français"
+                },
+                "sessionModality": {
+                    "id": 1,
+                    "name": "Présentiel",
+                    "price": 1680
+                },
+                "trainer": {
+                    "firstname": "Roxane",
+                    "lastname": "Anquetil"
+                },
+                "localisation": {
+                    "address": {
+                        "address": "5 rue Gustave Eiffel",
+                        "city": "Bois-Guillaume",
+                        "operationCity": "Rouen",
+                        "zipCode": "76230",
+                        "country": "France",
+                        "complement": ""
+                    },
+                    "room": "Ada Lovelace"
+                },
+                "slug": "formation-angular-creer-des-applications-web-du-03092020-au-06092020-langage-fr",
+                "startDateTime": "2020-09-03T09:00:00+00:00",
+                "endDateTime": "2020-09-06T17:30:00+00:00"
+            }
+        ]
+              
      
        
      }
@@ -534,7 +586,7 @@ export class TrainingService {
          "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
          "image": {
              "file": null,
-             "url": "/media/html-css-training.PNG"
+             "url": "/assets/img/html-css-training.png"
          },
          "level": "Débutant",
          "goals": [
@@ -611,7 +663,8 @@ export class TrainingService {
                  "chapters": [],
                  "durationInHours": 2
              }
-         ]
+         ],
+         "sessions": []
      }
        
     
