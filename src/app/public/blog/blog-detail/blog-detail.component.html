@@ -1,1 +1,133 @@
-<p>blog-detail works!</p>
+<section class="banner-section">
+</section>
+<section class="post-content-section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 post-title-block">
+               
+                <h1 class="text-center">{{title}}</h1>
+                <ul class="list-inline text-center">
+                    <li>{{author}} |</li>
+                    <li>{{category}} |</li>
+                    <li>
+                        <app-french-long-date
+                        [frenchLongDate]="publicationDate">
+                        </app-french-long-date>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12">
+                <h1>{{title}}</h1>
+                <div [innerHTML]="content.substring(0,400)">
+
+                </div>
+
+                <h2 class="blog-comment-title" id="comments">
+
+
+                    <ng-container *ngIf="commentsNumber > 0">
+                        {{commentsNumber}} Commentaires
+                        </ng-container>
+    
+                        <ng-container *ngIf="commentsNumber === 0">
+                        Pas de commentaires
+                        </ng-container>
+                </h2>
+	
+                <div class="card comments"  >
+                    <div class="card-body">
+                        <ng-container *ngFor="let comment of comments">
+                        <div class="row user-comment">
+                            <div class="col-md-2">
+                                <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                                <p class="text-secondary text-center">
+                                     <!--publication date-->
+                                    <app-french-long-date
+                                    [frenchLongDate]="comment.publicationDate">
+                                    </app-french-long-date>
+                                    
+
+                                </p>
+                            </div>
+                            <div class="col-md-10">
+                                <p>
+                                    <a class="float-left" target ="_blank" href="{{comment.website}}"><strong>{{comment.author}}</strong></a>
+                                   
+                                   
+                                    <ng-container *ngFor="let item of [].constructor(comment.notation); let i = index">
+                                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                    </ng-container>
+                    
+            
+                               </p>
+                               <div class="clearfix"></div>
+                                <p>{{comment.content}}</p>
+                               
+                            </div>
+                        </div>
+                    </ng-container>
+                      
+                    </div>
+                </div>
+
+                <div class="col-md-12 comment" >
+                    <div class="form-area ">  
+                        <br style="clear:both">
+                        <h3>Laisser un commentaire</h3>
+                       
+                        <form role="form">
+                        <div class="stars">
+                            <form action="">
+                              <input class="star star-5" id="star-5" type="radio" name="star"/>
+                              <label class="star star-5" for="star-5"></label>
+                              <input class="star star-4" id="star-4" type="radio" name="star"/>
+                              <label class="star star-4" for="star-4"></label>
+                              <input class="star star-3" id="star-3" type="radio" name="star"/>
+                              <label class="star star-3" for="star-3"></label>
+                              <input class="star star-2" id="star-2" type="radio" name="star"/>
+                              <label class="star star-2" for="star-2"></label>
+                              <input class="star star-1" id="star-1" type="radio" name="star"/>
+                              <label class="star star-1" for="star-1"></label>
+                            </form>
+                          </div>
+                                    
+                                    <div class="form-group">
+                                        <textarea class="form-control" type="textarea" id="message" placeholder="Votre commentaire" maxlength="140" rows="7"></textarea>
+                                            <span class="help-block"><p id="characterLeft" class="help-block ">Vous avez atteint la limite</p></span>                    
+                                        </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Site Web" required>
+                                    </div>
+                         
+                        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Poster votre commentaire</button>
+                        </form>
+                    </div>
+                </div>
+
+             </div>
+            <div class="col-lg-3  col-md-3 col-sm-12">
+            
+                <!--Recent articles component-->
+            <app-blog-recent-articles></app-blog-recent-articles>
+
+              <!--Categories of articles-->
+              <app-blog-articles-categories></app-blog-articles-categories>
+
+
+            
+            
+            </div>
+        </div>
+      
+
+    </div> <!-- /container -->
+</section>

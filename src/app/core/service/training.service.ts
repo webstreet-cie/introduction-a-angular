@@ -514,6 +514,7 @@ export class TrainingService {
          "sessions": [
             {
                 "id": 1,
+                "trainingTitle":"Angular - Créer des applications web",
                 "language": {
                     "name": "Français"
                 },
@@ -534,6 +535,8 @@ export class TrainingService {
             },
             {
                 "id": 2,
+                "trainingTitle":"HTML5 & CSS3 - Créer un site web responsive",
+
                 "language": {
                     "name": "Français"
                 },

@@ -68,7 +68,15 @@ import { TrainingListComponent } from './public/training/training-list/training-
 import { HomeComponent } from './public/home/home/home.component';
 
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule,ExtraOptions  } from '@angular/router';
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, -400],
+  onSameUrlNavigation:"reload",
+  relativeLinkResolution: 'corrected'
+};
 
 const routes: Routes = [
   {path: '', redirectTo: 'fr', pathMatch: 'full'},
@@ -146,7 +154,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions, )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

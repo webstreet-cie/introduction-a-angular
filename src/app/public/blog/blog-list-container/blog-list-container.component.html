@@ -1,1 +1,24 @@
-<p>blog-list-container works!</p>
+<h2>{{getTitle()}}</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <app-blog-list-card *ngFor="let article of articles"
+            [article]="article"
+            >
+          </app-blog-list-card>
+
+        </div>
+        <div class="col-lg-3  col-md-3 col-sm-12">
+              <!--Recent articles component-->
+              <app-blog-recent-articles></app-blog-recent-articles>
+
+              <!--Categories of articles-->
+              <app-blog-articles-categories></app-blog-articles-categories>
+
+         
+        </div>
+    </div>
+</div>
+
+

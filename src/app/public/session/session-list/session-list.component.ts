@@ -9,7 +9,11 @@ export class SessionListComponent implements OnInit {
 
   constructor() { }
 
+  
+
   ngOnInit(): void {
   }
+
+ 
 
 }

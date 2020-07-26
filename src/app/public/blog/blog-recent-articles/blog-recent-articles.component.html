@@ -1,0 +1,16 @@
+ <!-- Recent Posts -->
+ <div class="mb-7 blog-aside">
+    <h3 class="h5 mb-3 blog-aside-title">Articles récents</h3>
+
+    <div class="border rounded p-4">
+    <!-- Recent Posts List -->
+    <ul class="list-unstyled" *ngFor="let recentArticle of recentArticles;let i=index">
+        <ng-container *ngIf="i<=4">
+        <li class="py-1"><a [routerLink]="['/fr/blog',recentArticle.slug,recentArticle.id]" class="text-secondary" >{{recentArticle.title}}</a></li>
+        <li class="dropdown-divider"></li>
+    </ng-container>
+    </ul>
+    <!-- End Recent Posts List -->
+    </div>
+</div>
+<!-- End Recent Posts -->

@@ -1,1 +1,58 @@
-<p>blog-list-card works!</p>
+<div class="row">
+    <div class="col-md-12 post">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>
+                    <strong><a [routerLink]="['/fr/blog',article.slug,article.id]" class="post-title">{{article.title}}</a></strong></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 post-header-line">
+                <span class="glyphicon glyphicon-user"></span>par <a href="#">{{article.author}}</a> | <span class="glyphicon glyphicon-calendar">
+                </span>
+                <!--publication date-->
+                <app-french-long-date
+                [frenchLongDate]="article.publicationDate">
+                </app-french-long-date>
+                
+                
+                
+                | <span class="glyphicon glyphicon-comment"></span>
+                <a [routerLink]="['/fr/blog',article.slug,article.id]" fragment="comments">
+                   
+                    <ng-container *ngIf="article.commentsNumber > 0">
+                    {{article.commentsNumber}} Commentaires
+                    </ng-container>
+
+                    <ng-container *ngIf="article.commentsNumber === 0">
+                    Laisser un commentaire
+                    </ng-container>
+                </a>
+   
+                    
+                    <span class="glyphicon glyphicon-tags">
+                    </span>Catégorie : <a href="#"><span class="label label-info"> {{article.training.category.name}}
+
+                    </span></a> | <span class="glyphicon glyphicon-tags"></span>Compétences : 
+                    <ng-container *ngFor="let skill of article.training.skills">
+                    <a href="#"><span class="label label-info">{{skill.name}}</span></a>&nbsp;
+              
+                    </ng-container>
+            </div>
+        </div>
+        <div class="row post-content">
+            <div class="col-md-3">
+                <a href="#">
+                    <img src={{article.image.url}} alt="" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-9">
+              
+
+                <p [innerHTML]="article.content.substring(0,400)"></p>
+                <p>
+                    <a class="btn btn-read-more" [routerLink]="['/fr/blog',article.slug,article.id]">Lire la suite</a></p>
+            </div>
+        </div>
+    </div>
+</div>

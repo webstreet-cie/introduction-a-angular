@@ -1,0 +1,18 @@
+{{frenchLongDate.substring(8,10)}}
+<ng-container [ngSwitch]="frenchLongDate.substring(5,7)">
+    <span *ngSwitchCase="01">Jan</span>
+    <span *ngSwitchCase="02">Fév</span>
+    <span *ngSwitchCase="03">Mar</span>
+    <span *ngSwitchCase="04">Avr</span>
+    <span *ngSwitchCase="05">Mai</span>
+    <span *ngSwitchCase="06">Juin</span>
+    <span *ngSwitchCase="07">Juil</span>
+    <span *ngSwitchCase="08">Août</span>
+    <span *ngSwitchCase="09">Sept</span>
+    <span *ngSwitchCase="10">Oct</span>
+    <span *ngSwitchCase="11">Nov</span>
+    <span *ngSwitchCase="12">Déc</span>
+</ng-container>
+
+{{frenchLongDate.substring(0,4)}}
+({{frenchLongDate.substring(11,16)}})

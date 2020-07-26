@@ -137,13 +137,13 @@
                   <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-sessions" role="tabpanel" aria-labelledby="nav-sessions-tab">
 
-                        <div class="container">
+                       
                             <div class="row">
-                                <div class="[ col-xs-12 col-sm-offset-2 col-sm-12 ]">
+                                <div class="event-list-block [ col-xs-12 col-sm-offset-2 col-sm-12 ]">
                                     <ul class="event-list" *ngIf="sessions.length > 0" >
-                                        <li *ngFor="let session of sessions">
+                                        <li class="event-list-item" *ngFor="let session of sessions">
                                             <div class="ribbon-event"><span>{{session.sessionModality.name}}</span></div>
-
+                                        
                                             <time datetime="2018-10-29">
                                                 <span class="day">{{session.startDateTime.substring(8,10)}}</span>
                                                 <ng-container [ngSwitch]="session.startDateTime.substring(5,7)">
@@ -160,26 +160,26 @@
                                                     <span class="month" *ngSwitchCase="11">Nov</span>
                                                     <span class="month" *ngSwitchCase="12">Déc</span>
                                                     
-
+                                        
                                                 </ng-container>
                                                 <span class="year">{{session.startDateTime.substring(0,4)}}</span>
                                                 <span class="time">ALL DAY</span>
                                             </time>
-
+                                        
                                             <ng-container [ngSwitch]="session.sessionModality.name">
                                               
                                              <img *ngSwitchCase="'Classe Virtuelle'"alt="formation" src="assets/img/e-learning.jpg" />
                                              <img *ngSwitchCase="'Présentiel'"alt="formation" src="assets/img/presentiel.jpg" />
-
+                                        
                                             </ng-container>
                                             
                                              
-
+                                        
                                             <div class="info">
                                                 
                                                 <div class="row">
-                                                    <div class="col-sm-9 sm-12">
-                                                        <h2 class="event-title">{{title}}</h2>
+                                                    <div class="sm-12">
+                                                        <h2 class="event-title">{{session.trainingTitle}}</h2>
                                                     </div>
                                                     
                                                     
@@ -202,7 +202,7 @@
                                                             <span *ngSwitchCase="11">Nov</span>
                                                             <span *ngSwitchCase="12">Déc</span>
                                                         </ng-container>
-
+                                        
                                                         {{session.startDateTime.substring(0,4)}}
                                                         ({{session.startDateTime.substring(11,16)}})
                                                     </div>
@@ -225,11 +225,11 @@
                                                             <span *ngSwitchCase="11">Nov</span>
                                                             <span *ngSwitchCase="12">Déc</span>
                                                         </ng-container>
-
+                                        
                                                         {{session.endDateTime.substring(0,4)}}
                                                         ({{session.endDateTime.substring(11,16)}})
-
-
+                                        
+                                        
                                                     </div>
                                                 </div>
                                                 
@@ -245,12 +245,12 @@
                                                             </div>
                                                         </div>
                                                     </ng-container>
-
+                                        
                                                     <ng-container *ngIf="session.localisation == null">
                                                         <div class="row">
                                                             <div class="col-sm-3">Connexion :</div>
                                                             <div class="col-sm-9">
-                                                               Le lien vous sera envoyé par e-mail, suite à votre inscription.
+                                                               Le lien vous sera envoyé par e-mail.
                                                             </div>
                                                         </div>
                                                     </ng-container>
@@ -264,14 +264,14 @@
                                                     <div class="col-sm-3">Prix :</div>
                                                     <div class="col-sm-9">{{session.sessionModality.price}} € / personne</div>
                                                 </div>
-                                                <div class="row last-row">
+                                                <div class="div last-row">
                                                     <div class="col-sm-12 ">
                                                         <a routerLink="/fr/inscription" routerLinkActive="active" class="btn sign-up-btn">Participer</a>
                                                     </div>
                                                 </div>	
-
+                                        
                                                  
-                                                						
+                                                                        
                                             </div>
                                             <div class="social">
                                                 <ul>
@@ -281,13 +281,19 @@
                                                 </ul>
                                             </div>
                                         </li>
+                                       
+                
                                     </ul>
+
+                       
+
                                     <ng-container *ngIf="sessions.length == 0">
                                         <div class="card no-session">
-                                    Il n'y a pas de sessions programmées pour cette formation pour le moment.
-                                    Vous souhaitez suivre cette formation ? 
-                                    Aucun problème ! Nous pouvons vous organiser une formation Sur-Mesure !
-                                    Contactez nos conseillers formations :
+                                    Il n'y a pas de sessions programmées pour le moment.
+                                    Vous souhaitez suivre une formation avec notre organisme ? 
+                                    Aucun problème ! 
+                                    Nous pouvons organiser pour vous une formation sur-mesure !
+                                    Contactez nos conseillers formations dès maintenant :
                                             <hr/>
                                     <div class="row">
                                         <div class="btn-no-session ml-auto mr-auto">
@@ -311,7 +317,7 @@
                                     </ng-container>
                                 </div>
                             </div>
-                        </div>
+                      
                     
 
                     </div>

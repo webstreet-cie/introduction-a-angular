@@ -1,1 +1,22 @@
-<p>session-list-container works!</p>
+<h2>{{getTitle()}}</h2>
+
+<div class="container">
+  <div class="row">
+      <div class="event-list-block [ col-xs-12 col-sm-offset-2 col-sm-12 ]">
+          <ul class="event-list">
+            <app-session-list-card *ngFor="let session of sessions"
+
+            [session]="session"
+          
+            >   
+          </app-session-list-card>
+
+          
+            
+
+          </ul>
+    </div>
+  </div>
+</div>
+
+

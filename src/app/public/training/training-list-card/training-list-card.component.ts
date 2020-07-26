@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component,Input} from '@angular/core';
 
 @Component({
@@ -16,5 +17,8 @@ export class TrainingListCardComponent {
   @Input() id: string;
   @Input() slug: string;
   @Input() imageUrl:string;
-  constructor() { }
+
+
+  constructor(private route: ActivatedRoute) { }
+
 }

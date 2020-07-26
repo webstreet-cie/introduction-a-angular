@@ -1,3 +1,4 @@
+import { SessionModule } from './../session/session.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import {SharedModule} from '../../shared/shared.module';
@@ -14,10 +15,13 @@ import { TrainingListContainerComponent } from './training-list-container/traini
   declarations: [TrainingListComponent, TrainingDetailComponent, TrainingListCardComponent, TrainingListContainerComponent],
   imports: [
     SharedModule,
-    RouterModule
+    RouterModule,
+    SessionModule
+
   ],
   exports: [
-    TrainingListComponent
+    TrainingListComponent,
+ 
   ]
 })
 export class TrainingModule { }
