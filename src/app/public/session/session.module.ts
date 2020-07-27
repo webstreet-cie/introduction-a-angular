@@ -1,4 +1,3 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import {SharedModule} from '../../shared/shared.module';
 
@@ -12,8 +11,7 @@ import { SessionListContainerComponent } from './session-list-container/session-
 @NgModule({
   declarations: [SessionDetailComponent, SessionListComponent, SessionListCardComponent, SessionListContainerComponent],
   imports: [
-    SharedModule,
-    RouterModule
+    SharedModule
   ],
   exports: [
     SessionListComponent,

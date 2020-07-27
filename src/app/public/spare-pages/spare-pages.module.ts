@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {SharedModule} from '../../shared/shared.module';
+
+
 import { BecomeATrainerComponent } from './become-atrainer/become-atrainer.component';
 import { CartComponent } from './cart/cart.component';
 import { ConnexionComponent } from './connexion/connexion.component';
@@ -17,7 +19,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [BecomeATrainerComponent, CartComponent, ConnexionComponent, RegistrationComponent, ForgottenPasswordComponent, AboutComponent, ContactComponent, SitemapComponent, ConditionsComponent, ConfidentialityComponent, NotFoundComponent],
   imports: [
-    CommonModule
+    SharedModule
   ]
 })
 export class SparePagesModule { }

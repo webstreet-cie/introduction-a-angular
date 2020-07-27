@@ -113,3 +113,16 @@ $( document ).ready(function() {
     $('#count-existing').html(value);
   });
 });
+
+$(document).ready(function(){
+$(".dropdown").each(function() {
+    hover(function(){
+        var dropdownMenu = $(this).children(".dropdown-menu");
+        if(dropdownMenu.is(":visible")){
+            dropdownMenu.parent().toggleClass("open");
+        }
+    });
+});
+}); 
+
+ 

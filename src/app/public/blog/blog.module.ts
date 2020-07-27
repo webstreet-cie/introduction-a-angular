@@ -1,4 +1,3 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import {SharedModule} from '../../shared/shared.module';
 
@@ -14,8 +13,7 @@ import { BlogArticlesCategoriesComponent } from './blog-articles-categories/blog
 @NgModule({
   declarations: [BlogDetailComponent, BlogListComponent, BlogListCardComponent, BlogListContainerComponent, BlogRecentArticlesComponent, BlogArticlesCategoriesComponent],
   imports: [
-    SharedModule,
-    RouterModule
+    SharedModule
   ]
 })
 export class BlogModule { }
