@@ -1,20 +1,18 @@
 
 
 <div class="container">
-  <div class="row">
-    <h2>{{getTitle()}}</h2>
+  <div class="row session-container">
+    <h2 class="col-lg-12">Nos prochaines sessions</h2>
+    <h6 class="col-lg-12 baseline">Des sessions toute l'année en présentiel et en classe virtuelle ! 
+      N'attendez plus pour vous inscrire !</h6>
       <div class="event-list-block [ col-xs-12 col-sm-offset-2 col-sm-12 ]">
           <ul class="event-list">
-            <app-session-list-card *ngFor="let session of sessions"
-
+            <ng-container *ngFor="let session of sessions;let i = index" >
+            <app-session-list-card *ngIf="i<=numberOfSessions"
             [session]="session"
-          
             >   
           </app-session-list-card>
-
-          
-            
-
+        </ng-container>
           </ul>
     </div>
   </div>

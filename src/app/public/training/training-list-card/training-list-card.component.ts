@@ -14,6 +14,7 @@ export class TrainingListCardComponent {
   @Input() reference: string;
   @Input() description: string;
   @Input() modalities:string[];
+  @Input() skills:string[];
   @Input() id: string;
   @Input() slug: string;
   @Input() imageUrl:string;

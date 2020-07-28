@@ -1,6 +1,10 @@
-<app-session-features-card *ngFor="let session of sessions"
-[title]="session.title">   
-</app-session-features-card>
+<app-session-list-container
+[numberOfSessions]=2
+></app-session-list-container>
+
+<div class="row mb-5">
+    <div class="col text-center"><a routerLink="/fr/sessions" routerLinkActive="active" class="btn btn-primary">Voir toutes les sessions</a></div>
+</div>
 
 
 

@@ -19,10 +19,14 @@ import { SparePagesModule } from './spare-pages/spare-pages.module';
     HomeModule,
     SessionModule,
     BlogModule,
-    SparePagesModule
+    SparePagesModule,
+
   ],
   exports: [
-    TrainingModule
+    TrainingModule,
+    SessionModule,
+    HomeModule,
+
   ]
 })
 export class PublicModule { }

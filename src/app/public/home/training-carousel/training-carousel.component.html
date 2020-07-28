@@ -1,0 +1,59 @@
+
+<div class="training-carousel">
+    <h2 class="col-lg-12">Un choix de formation extrêmement vaste ! </h2>
+    <h6 class="col-lg-12 baseline">Choisissez parmi plus de 300 formations, dispensées en présentiel, en classe 
+        virtuelle ou en session sur-mesure. </h6>
+
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+            <a class="nav-item nav-link active" id="informatique-tab" data-toggle="tab" href="#informatique" role="tab" aria-controls="informatique" aria-selected="false">Informatique</a>
+            <a class="nav-item nav-link" id="management-tab" data-toggle="tab" href="#management" role="tab" aria-controls="management" aria-selected="true">Management</a>
+            <a class="nav-item nav-link" id="langues-tab" data-toggle="tab" href="#langues" role="tab" aria-controls="langues" aria-selected="true">Langues</a>
+
+        </div>
+    </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="informatique" role="tabpanel" aria-labelledby="informatique-tab">
+            <app-training-card-deck
+                [trainings]="trainingsComputing"
+                >
+                </app-training-card-deck>
+       
+
+            <div class="row mb-5">
+                <div class="col text-center"><a routerLink="/fr/formations" routerLinkActive="active" class="btn btn-primary">Voir toutes les formations</a></div>
+            </div>
+
+     
+        </div>
+        <div class="tab-pane fade" id="management" role="tabpanel" aria-labelledby="management-tab">
+       
+            <app-training-card-deck
+                [trainings]="trainingsManagement"
+                >
+                </app-training-card-deck>
+            <div class="row mb-5">
+                <div class="col text-center"><a routerLink="/fr/formations" routerLinkActive="active" class="btn btn-primary">Voir toutes les formations</a></div>
+            </div>
+       
+        </div>
+
+        <div class="tab-pane fade" id="langues" role="tabpanel" aria-labelledby="langues-tab">
+         
+            <app-training-card-deck
+            [trainings]="trainingsLanguage"
+            >
+            </app-training-card-deck>
+            <div class="row mb-5">
+                <div class="col text-center"><a routerLink="/fr/formations" routerLinkActive="active" class="btn btn-primary">Voir toutes les formations</a></div>
+            </div>
+        
+        </div>
+     
+      </div>
+ 
+	
+</div>
+
+
+

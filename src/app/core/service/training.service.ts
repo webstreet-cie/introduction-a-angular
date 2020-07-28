@@ -2,16 +2,22 @@ import { Injectable } from '@angular/core';
 import { Category } from '../../shared/models/category';
 import {Training} from '../../shared/models/training';
 import { Module } from '../../shared/models/module';
+import { SlicePipe } from '@angular/common';
 
 @Injectable()
 export class TrainingService {
+
+    trainingsOfCategory;
 
    trainings =
    [
       {
          "id": 1,
          "category": {
-             "name": "Développement web et mobile"
+             "name": "Informatique",
+             "subCategory":{
+                 "name":"Développement web"
+             }
          },
          "skills": [
              {
@@ -27,7 +33,7 @@ export class TrainingService {
          "description": "Dans cette formation, vous apprendrez à créer des applications web et mobiles performantes à l'aide du framework Angular.",
          "image": {
              "file": null,
-             "url": "/assets/img/formation_angular.png"
+             "url": "/assets/img/formation_angular.jpg"
          },
          "level": "Intermédiaire",
          "goals": [
@@ -573,8 +579,11 @@ export class TrainingService {
       {
          "id": 2,
          "category": {
-             "name": "Développement web et mobile"
-         },
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Développement web"
+            }
+        },
          "skills": [
              {
                  "name": "Html"
@@ -589,7 +598,7 @@ export class TrainingService {
          "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
          "image": {
              "file": null,
-             "url": "/assets/img/html-css-training.png"
+             "url": "/assets/img/formation_html_css.jpg"
          },
          "level": "Débutant",
          "goals": [
@@ -668,7 +677,1640 @@ export class TrainingService {
              }
          ],
          "sessions": []
-     }
+     },
+     {
+        "id": 3,
+        "category": {
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Développement web"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 4,
+        "category": {
+            "name": "Management",
+            "subCategory":{
+                "name":"Leadership"
+            }
+        },
+        "skills": [
+            {
+                "name": "Leadership"
+            },
+            {
+                "name": "Equipe"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "Manager de proximité",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 5,
+        "category": {
+            "name": "Langues",
+            "subCategory":{
+                "name":"Anglais"
+            }
+        },
+        "skills": [
+            {
+                "name": "Anglais oral"
+            },
+            {
+                "name": "Anglais écrit"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "Anglais - Se perfectionner",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 6,
+        "category": {
+            "name": "Langues",
+            "subCategory":{
+                "name":"Anglais"
+            }
+        },
+        "skills": [
+            {
+                "name": "Anglais oral"
+            },
+            {
+                "name": "Anglais écrit"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "Anglais - Etre à l'aise à l'oral",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 7,
+        "category": {
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Développement web"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 8,
+        "category": {
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Développement web"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 9,
+        "category": {
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Développement web"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 10,
+        "category": {
+            "name": "Prendre les bonnes décisions",
+            "subCategory":{
+                "name":"Coaching"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 11,
+        "category": {
+            "name": "Management",
+            "subCategory":{
+                "name":"Coaching"
+            }
+        },
+        "skills": [
+            {
+                "name": "Coaching"
+            },
+            {
+                "name": "Management"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "Manager au mieux ses équipes",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 12,
+        "category": {
+            "name": "Management",
+            "subCategory":{
+                "name":"Coaching"
+            }
+        },
+        "skills": [
+            {
+                "name": "Management"
+            },
+            {
+                "name": "Gestion des conflits"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "Savoir gérer les conflits",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+     {
+        "id": 13,
+        "category": {
+            "name": "Langues",
+            "subCategory":{
+                "name":"Anglais"
+            }
+        },
+        "skills": [
+            {
+                "name": "Anglais écrit"
+            },
+            {
+                "name": "Anglais oral"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "Apprendre les bases de l'anglais",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 14,
+        "category": {
+            "name": "Langues",
+            "subCategory":{
+                "name":"Français Langue étrangère"
+            }
+        },
+        "skills": [
+            {
+                "name": "Français oral"
+            },
+            {
+                "name": "Français écrit"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "Français - Maîtriser la grammaire",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+      {
+        "id": 15,
+        "category": {
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Français Langue étrangère"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 16,
+        "category": {
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Français Langue étrangère"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 17,
+        "category": {
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Français Langue étrangère"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+    {
+        "id": 18,
+        "category": {
+            "name": "Informatique",
+            "subCategory":{
+                "name":"Français Langue étrangère"
+            }
+        },
+        "skills": [
+            {
+                "name": "Html"
+            },
+            {
+                "name": "Css"
+            }
+        ],
+        "reference": "HTW-2-15",
+        "title": "HTML5 & CSS3 - Créer un site web responsive",
+        "slug": "formation-html5-css3-creer-un-site-web-responsive",
+        "description": "Dans cette formation, vous apprendrez à créer un site web responsive avec HTML5 et CSS3.",
+        "image": {
+            "file": null,
+            "url": "/assets/img/formation_html_css.jpg"
+        },
+        "level": "Débutant",
+        "goals": [
+            "Développer des sites web responsive avec HTML5 & CSS3",
+            "Maîtriser les fondamentaux de HTML5 and CSS3",
+            "Etre capable de créer un site web responsive compatible avec les navigateurs modernes"
+        ],
+        "participants": [
+            "Développeurs web",
+            "Designers web",
+            "Chefs de projet Informatique",
+            "Architectes Informatique"
+        ],
+        "prerequisite": "Bonne compréhension des technologies web",
+        "pedagogicalMethods": [
+            "Pratique du développement",
+            "Présentation de sites web issus du monde réel"
+        ],
+        "practicalWork": "Vous réaliserez un site web responsive pour une start-up.",
+
+        "durationInHours": 21,
+                 "modalities": [
+           {
+               "name": "Classe Virtuelle",
+               "price":378
+           },
+           {
+              "name": "Présentiel",
+              "price":1260
+           },
+           {
+              "name": "Sur-Mesure",
+              "price":1386
+           }
+       ],
+        "modules": [
+            {
+                "title": "Les bases de HTML5",
+                "chapters": [],
+                "durationInHours": 4
+            },
+            {
+                "title": "Les médias HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les formulaires HTML5",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "Les APIs HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les microdonnées HTML5",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Les bases de CSS3",
+                "chapters": [],
+                "durationInHours": 3
+            },
+            {
+                "title": "CSS3 Avancé",
+                "chapters": [],
+                "durationInHours": 2
+            },
+            {
+                "title": "Design Web Responsive avec CSS3",
+                "chapters": [],
+                "durationInHours": 2
+            }
+        ],
+        "sessions": []
+    },
+       
        
     
    ];
@@ -686,4 +2328,16 @@ export class TrainingService {
        );
        return training;
     }
+
+ 
+
+       getTrainingsByCategory(cat:string,numberOfTrainings:number) {
+        const trainingsByCategory = this.trainings.filter(function(el) {
+            return el.category.name === cat;
+          }
+          );
+          return trainingsByCategory.slice(0,numberOfTrainings);
+    }
+
+  
 }

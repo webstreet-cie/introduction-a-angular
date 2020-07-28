@@ -98,10 +98,16 @@ body{
 }
 
 /*MEGA MENU*/
-.dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
+.dropdown-menu.show {
+  display: none !important;
+}
+.dropdown:hover .dropdown-menu{
   display: block;
 }
 
+.dropdown-menu.show:hover {
+  display: block !important;
+}
 
 .top-auto{top:auto}
 .dropdown-item, .dropdown-menu h3 a {
@@ -313,8 +319,9 @@ body{
 .detail {
   box-shadow: 3px 4px 5px 3px rgba(0,0,0,.2);
   margin-bottom: 20px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background: #f5f5f5;
 }
 
 
@@ -371,15 +378,15 @@ margin-bottom: 10px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
-  color: #000;
-  border: 2px solid #1D3557;
+  color: white;
+ 
+  background-color: #ee7820;
   padding: 2px 6px;
   border-radius: 5px;
 }
 
 .detail-box ul li:hover{
-background-color: #1D3557;
-border: 2px solid #1D3557;
+background-color:  #ee7820;
 color: #fff;
 }
 
@@ -391,7 +398,7 @@ color: #fff;
 .detail-box h6 .category{
   color:white;
   font-size: 12px;
-  background: linear-gradient(115deg, rgb(134, 128, 128) 0%, rgb(29, 53, 87) 40%, transparent 40%),#000;
+  background: linear-gradient(115deg, rgb(238, 120, 32) 0%, rgb(230, 30, 80) 40%, transparent 40%),#E61E50;
 }
 
 .detail-box h6 .virtual{
@@ -497,7 +504,24 @@ padding-bottom: 30px;
 font-size: 13px;
 line-height: 20px;
 }
+.skills-on-img {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  z-index: 1; 
 
+  width: 200px;
+  height: 150px;
+  text-align: center;
+}
+.skills-on-img span {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+}
 .ribbon {
   position: absolute;
   z-index: 1;
@@ -761,6 +785,12 @@ caption { caption-side:top;text-align:center; }
 
 /*TRAINING DETAIL CARD*/
 
+/*SESSIONS CONTAINER TITLE AND INTRO*/
+.session-container .baseline {
+  color:rgba(0,0,0,.5);
+}
+/*SESSIONS CONTAINER TITLE AND INTRO*/
+
 /*TRAINING DETAIL SESSIONS*/
 .div-product-title, .div-product-subtitle {
 
@@ -918,7 +948,7 @@ text-transform: uppercase;
 
 .event-list > li:nth-child(even) > time,
 .event-list > app-session-list-card:nth-child(even) time {
-background-color: rgb(165, 82, 167) !important;
+background-color: #ee7820 !important;
 }
 
 .event-list > li > time > span, .event-list-item > time > span  {
@@ -1246,12 +1276,12 @@ label.star:before {
 /*CONTACT PAGE*/
 .contact-form{
   background: #fff;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 5%;
   width: 70%;
 }
 .contact-form .form-control{
-  border-radius:1rem;
+  border-radius:0.5rem;
 }
 .contact-image{
   text-align: center;
@@ -1272,9 +1302,45 @@ label.star:before {
   margin-bottom: 8%;
   margin-top: -10%;
   text-align: center;
-  color: #0062cc;
+  color: #ee7820;
 }
 
-
-
 /*CONTACT PAGE*/
+
+/*TRAINING CAROUSEL*/
+.training-carousel {
+  background: #f2f3f5;
+      padding: 40px 100px 0px 100px;
+}
+/*TRAINING CAROUSEL*/
+
+/*HOME TRAINING CARD DECK*/
+.training-card-deck {
+  margin-top:20px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.training-card-deck .col {
+  padding-right:0px;
+  padding-left: 0px;
+}
+.training-card {
+  padding: 0px !important;
+  margin-top:0px;
+  margin-right:5px !important;
+  margin-left:5px !important;
+  background:white;
+
+}
+
+.training-card .card-body {
+  padding:1rem;
+  min-height: 230px;
+}
+
+.training-card .card-footer {
+  padding: .25rem .25rem;
+  background:white;
+}
+/*HOME TRAINING CARD DECK*/

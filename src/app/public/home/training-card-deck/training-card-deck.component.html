@@ -1,0 +1,45 @@
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 training-card-deck">
+
+    <div *ngFor="let training of trainings" class="col mb-4">
+   <div class="card training-card">
+        <div class="pickgradient">
+            <img 
+            src={{training.image.url}} 
+            class="card-img-top" alt={{training.title}}>
+            </div>
+
+
+        <div class="card-body">
+            <h6><strong>{{training.title}}</strong></h6>
+
+
+            <h6 class="card-subtitle mb-2 text-muted">
+            Durée : <span class="badge badge-pill badge-secondary">{{training.durationInHours}} heures</span>  
+        </h6>
+
+            <h6>
+            Compétences acquises :  
+            <span  *ngFor="let skill of training.skills" >
+                <span class="badge badge-pill badge-info">{{skill.name}} </span>&nbsp;
+                </span>
+            </h6>
+            <h6> 
+                Niveau :
+                
+                <span class="badge badge-pill" [ngClass]="{'badge-danger': training.level === 'Débutant', 'badge-warning':training.level === 'Intermédiaire', 'badge-success':training.level === 'Avancé'}">{{training.level}} </span>&nbsp;
+            
+            </h6>
+
+            <p class="card-text">A partir de <strong>{{training.modalities[0].price}} €</strong></p>
+
+        </div>
+
+        <div class="card-footer">
+            
+            <a [routerLink]="['/fr/formations',training.slug, training.id]" class="btn btn-primary  float-right">En savoir plus</a>
+        </div>
+
+</div> 
+</div>
+</div>
+
